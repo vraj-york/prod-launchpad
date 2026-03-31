@@ -138,8 +138,16 @@ export function CorporationsDirectoryPage() {
             overflow: 'hidden',
           }}
         >
-          <Box sx={{ p: 2, display: 'flex', flexWrap: 'wrap', gap: 2, alignItems: 'center' }}>
-            <Box sx={{ flex: '1 1 360px', minWidth: 200, maxWidth: '100%' }}>
+          <Box
+            sx={{
+              p: 2,
+              display: 'grid',
+              gap: 2,
+              alignItems: 'center',
+              gridTemplateColumns: { xs: '1fr', md: 'minmax(280px, 1fr) auto auto' },
+            }}
+          >
+            <Box sx={{ minWidth: 0, width: '100%' }}>
               <SearchInput
                 fullWidth
                 placeholder="Search here..."
