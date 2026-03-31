@@ -139,12 +139,15 @@ export function CorporationsDirectoryPage() {
           }}
         >
           <Box sx={{ p: 2, display: 'flex', flexWrap: 'wrap', gap: 2, alignItems: 'center' }}>
-            <SearchInput
-              placeholder="Search here..."
-              value={filters.searchText}
-              onChange={handleSearchChange}
-              aria-label="Search corporation directory"
-            />
+            <Box sx={{ flex: '1 1 360px', minWidth: 200, maxWidth: '100%' }}>
+              <SearchInput
+                fullWidth
+                placeholder="Search here..."
+                value={filters.searchText}
+                onChange={handleSearchChange}
+                aria-label="Search corporation directory"
+              />
+            </Box>
             <CustomSelect
               options={STATUS_FILTER_OPTIONS}
               value={filters.status}
