@@ -7,7 +7,7 @@ test.describe('Reset Password Page', () => {
 
   test('navigates to /reset-password/:token and shows page content (logo, footer)', async ({ page }) => {
     await expect(page).toHaveURL(/\/reset-password\/valid-token/);
-    await expect(page.getByAltText('BSPBlueprint')).toBeVisible({ timeout: 10000 });
+    await expect(page.getByAltText('York IE Launch Pad')).toBeVisible({ timeout: 10000 });
     await expect(page.getByText('Version 1.0')).toBeVisible();
     await expect(page.getByRole('link', { name: 'Privacy Policy' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Terms of Use' })).toBeVisible();

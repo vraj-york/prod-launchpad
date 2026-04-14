@@ -4,7 +4,7 @@ test.describe('Forgot Password Page', () => {
   test('navigates to /forgot-password and shows page content (logo, footer, dialog)', async ({ page }) => {
     await page.goto('/forgot-password');
     await expect(page).toHaveURL('/forgot-password');
-    await expect(page.getByAltText('BSPBlueprint')).toBeVisible({ timeout: 10000 });
+    await expect(page.getByAltText('York IE Launch Pad')).toBeVisible({ timeout: 10000 });
     await expect(page.getByText('Version 1.0')).toBeVisible();
     await expect(page.getByRole('link', { name: 'Privacy Policy' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Terms of Use' })).toBeVisible();

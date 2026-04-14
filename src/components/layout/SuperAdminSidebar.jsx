@@ -27,6 +27,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleSidebar, selectIsSidebarOpen } from '../../store/slices/uiSlice';
 import { selectCurrentCorporationLogoUrl } from '../../store/slices/corporationsSlice';
+import yorkIeLaunchPadLogo from '../../assets/images/york-ie-launch-pad-logo.svg';
 
 const sidebarGroups = [
   {
@@ -99,7 +100,7 @@ export function SuperAdminSidebar({ variant, onNavigate, onClose } = {}) {
   
   // Check if we're on a corporation profile page
   const isCorporationProfilePage = location.pathname.match(/^\/corporations\/[^/]+\/profile/);
-  const logoSrc = isCorporationProfilePage && corporationLogoUrl ? corporationLogoUrl : '/vectors/l.svg';
+  const logoSrc = isCorporationProfilePage && corporationLogoUrl ? corporationLogoUrl : yorkIeLaunchPadLogo;
 
   const handleNavClick = (path) => {
     if (isDrawer && onNavigate) onNavigate();
@@ -127,7 +128,7 @@ export function SuperAdminSidebar({ variant, onNavigate, onClose } = {}) {
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <img
               src={logoSrc}
-              alt={isCorporationProfilePage && corporationLogoUrl ? "Corporation logo" : "BSPBlueprint logo"}
+              alt={isCorporationProfilePage && corporationLogoUrl ? "Corporation logo" : "York IE Launch Pad"}
               style={{ height: 32, width: 'auto' }}
             />
             {isCorporationProfilePage && corporationLogoUrl && (

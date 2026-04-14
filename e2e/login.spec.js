@@ -4,7 +4,7 @@ test.describe('Login Page', () => {
   test('navigates to /login and shows page content (logo, footer, login card)', async ({ page }) => {
     await page.goto('/login');
     await expect(page).toHaveURL('/login');
-    await expect(page.getByAltText('BSPBlueprint')).toBeVisible({ timeout: 10000 });
+    await expect(page.getByAltText('York IE Launch Pad')).toBeVisible({ timeout: 10000 });
     await expect(page.getByText('Version 1.0')).toBeVisible();
     await expect(page.getByRole('link', { name: 'Privacy Policy' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Terms of Use' })).toBeVisible();
@@ -115,7 +115,7 @@ test.describe('Login Page', () => {
     await expect(page.getByRole('heading', { name: 'Welcome back!', level: 1 })).toBeVisible();
     await expect(page.getByText('Enter your email and password to sign in.')).toBeVisible();
     await expect(page.getByText('Need help?')).toBeVisible();
-    await expect(page.getByAltText('BSPBlueprint')).toBeVisible();
+    await expect(page.getByAltText('York IE Launch Pad')).toBeVisible();
   });
 
   test('empty password with blur shows validation error and Login stays disabled', async ({ page }) => {

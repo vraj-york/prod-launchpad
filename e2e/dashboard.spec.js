@@ -75,7 +75,7 @@ test.describe('Dashboard Page', () => {
       await expect(page.getByRole('banner')).toBeVisible({ timeout: 10000 });
       await expect(page.getByRole('button', { name: 'Toggle navigation menu' })).toBeVisible();
       await expect(page.getByRole('button', { name: 'More options' })).toBeVisible();
-      await expect(page.getByAltText('BSPBlueprint')).toBeVisible();
+      await expect(page.getByAltText('York IE Launch Pad')).toBeVisible();
     });
 
     test('page title and empty state use updated typography', async ({ page }) => {

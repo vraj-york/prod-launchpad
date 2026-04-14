@@ -5,7 +5,7 @@ import { BSPBlueprintLogo } from '../common/BSPBlueprintLogo';
  * Email Template - Verification Code. Renders the structure of the 2FA verification
  * email: logo container (dark bg, white wordmark), content container (white),
  * frame background rgba(248, 247, 251, 1). Used for preview or server-side HTML generation.
- * BSPBlueprint logo uses white wordmark (l-white.svg) per email template spec.
+ * York IE Launch Pad logo (light variant for dark logo container).
  */
 export function EmailVerificationCodeTemplate({
   verificationCode = '000000',

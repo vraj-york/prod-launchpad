@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Two-Factor Authentication (2FA)', () => {
   test('navigates to /2fa/verify and shows page content (logo, dialog, footer)', async ({ page }) => {
     await page.goto('/2fa/verify');
-    await expect(page.getByAltText('BSPBlueprint')).toBeVisible({ timeout: 10000 });
+    await expect(page.getByAltText('York IE Launch Pad')).toBeVisible({ timeout: 10000 });
     await expect(page.getByRole('heading', { name: 'Password Reset' })).toBeVisible();
     await expect(page.getByText(/We've sent a 6-digit code/)).toBeVisible();
     await expect(page.getByText(/ad\*\*\*@pcsglobal\.com/)).toBeVisible();
@@ -113,7 +113,7 @@ test.describe('Two-Factor Authentication (2FA)', () => {
 
   test('email template preview shows verification code layout (logo, content, code)', async ({ page }) => {
     await page.goto('/2fa/email-preview');
-    await expect(page.getByAltText('BSPBlueprint')).toBeVisible({ timeout: 10000 });
+    await expect(page.getByAltText('York IE Launch Pad')).toBeVisible({ timeout: 10000 });
     await expect(page.getByRole('document', { name: 'Verification code email' })).toBeVisible();
     await expect(page.getByText('Your verification code')).toBeVisible();
     await expect(page.getByText('123456')).toBeVisible();
