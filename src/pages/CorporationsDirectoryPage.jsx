@@ -2,8 +2,8 @@ import { useEffect, useCallback } from 'react';
 import { Box, Typography, Card, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Plus } from 'lucide-react';
 import { SuperAdminLayout } from '../components/layout/SuperAdminLayout';
+import addPlusIcon from '../assets/images/add-plus-icon.svg';
 import { SearchInput } from '../components/common/SearchInput';
 import { CustomSelect } from '../components/company-creation/CustomSelect';
 import { CorporationsDirectoryTable } from '../components/corporation-directory/CorporationsDirectoryTable';
@@ -112,19 +112,36 @@ export function CorporationsDirectoryPage() {
           </Box>
           <Button
             variant="contained"
-            startIcon={<Plus size={18} style={{ color: 'rgba(255, 255, 255, 1)' }} />}
+            startIcon={
+              <Box
+                component="img"
+                src={addPlusIcon}
+                alt=""
+                aria-hidden
+                sx={{ width: 18, height: 18, display: 'block' }}
+              />
+            }
             onClick={() => navigate('/corporations/add')}
             aria-label="Add a new corporation"
             sx={{
-              minWidth: 280,
-              background: '#000000',
-              color: 'rgba(255, 255, 255, 1)',
+              width: 'fit-content',
+              minWidth: 'unset',
+              px: 2.5,
+              py: 1,
+              background: '#EAB308',
+              color: '#111827',
               fontFamily: '"Inter", "Helvetica", "Arial", sans-serif',
               fontWeight: 600,
               fontSize: 14,
               textTransform: 'none',
               borderRadius: 2,
-              '&:hover': { background: 'rgba(0, 0, 0, 0.85)' },
+              boxShadow: 'none',
+              '&:hover': {
+                background: '#CA8A04',
+                color: '#111827',
+                boxShadow: 'none',
+              },
+              '& .MuiButton-startIcon': { color: '#111827' },
             }}
           >
             Add New Corporation
